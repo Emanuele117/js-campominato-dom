@@ -18,7 +18,22 @@ const containerOne = document.querySelector('.container_difficolta1');
 
 const bottone1 = document.getElementById('bottone1');
 
+
 bottone1.addEventListener('click', function () {
+
+    const bombe = []
+    for (let index = 1; index <= 16; index++) {
+        const numeriCasuali = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+        console.log(numeriCasuali);
+
+
+
+    }
+
+
+
+
+
     for (let i = 1; i <= 100; i++) {
         // crreo l'elemento dom da mettere nella griglia
         const divElementOne = document.createElement('div');
@@ -35,6 +50,7 @@ bottone1.addEventListener('click', function () {
         // appendo l'elemento creato al container
         containerOne.append(divElementOne)
 
+
         //attacco un eventListner a ciascun elemento creato nel ciclo
         divElementOne.addEventListener('click', function () {
             // modifico il colore di questo elemento con style
@@ -42,6 +58,11 @@ bottone1.addEventListener('click', function () {
         })
 
     }
+
+
+
+
+
 })
 
 
@@ -74,11 +95,15 @@ bottone2.addEventListener('click', function () {
         // appendo l'elemento creato al container
         containerTwo.append(divElementTwo)
 
+
+
         //attacco un eventListner a ciascun elemento creato nel ciclo
         divElementTwo.addEventListener('click', function () {
             // modifico il colore delle celle
             this.style.backgroundColor = 'blue'
         })
+
+
     }
 })
 
@@ -110,3 +135,7 @@ bottone3.addEventListener('click', function () {
 
     }
 })
+
+
+
+
