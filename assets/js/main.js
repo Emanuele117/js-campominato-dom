@@ -18,19 +18,22 @@ const containerOne = document.querySelector('.container_difficolta1');
 
 const bottone1 = document.getElementById('bottone1');
 
+let bombe = []
+
+const numeriCasuali = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
 
 bottone1.addEventListener('click', function () {
 
-    const bombe = []
+    bombe = []
+
     for (let index = 1; index <= 16; index++) {
         const numeriCasuali = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
-        console.log(numeriCasuali);
+        bombe.push(numeriCasuali)
 
 
 
     }
-
-
+    console.log(bombe)
 
 
 
@@ -55,7 +58,18 @@ bottone1.addEventListener('click', function () {
         divElementOne.addEventListener('click', function () {
             // modifico il colore di questo elemento con style
             this.style.backgroundColor = 'blue'
+
+            cellNumber = this.innerHTML
+
+
+            if (bombe.includes(numeriCasuali)) {
+                this.style.backgroundColor = 'red'
+            } else {
+                console.log('continua');
+            }
         })
+
+
 
     }
 
